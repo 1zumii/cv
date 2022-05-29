@@ -1,0 +1,118 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"extends": [
+		"airbnb",
+		"airbnb/hooks",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parserOptions": {
+		"project": [
+			"./tsconfig.json"
+		]
+	},
+	"settings": {
+		"react": {
+			// Tells eslint-plugin-react to automatically detect the version of React to use
+			"version": "detect"
+		},
+		// 用于指明 import/order 中，哪些属于内部导入模块
+		"import/internal-regex": "^@(src)/"
+	},
+	"rules": {
+		// 不检查 "React" must be in scope when using JSX，同时在 tsconfig 中配置 compilerOptions.jsx: react-jsx
+		"react/react-in-jsx-scope": "off",
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [
+					".jsx",
+					".tsx"
+				]
+			}
+		],
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+		"react/function-component-definition": [
+			"error",
+			{
+				"namedComponents": [
+					"function-declaration",
+					"function-expression",
+					"arrow-function"
+				],
+				"unnamedComponents": [
+					"function-expression",
+					"arrow-function"
+				]
+			}
+		],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"delimiter": "semi",
+					"requireLast": true
+				},
+				"singleline": {
+					"delimiter": "semi",
+					"requireLast": false
+				},
+				"multilineDetection": "brackets"
+			}
+		],
+		"@typescript-eslint/type-annotation-spacing": [
+			"error",
+			{
+				"overrides": {
+					"colon": {
+						"before": false,
+						"after": true
+					}
+				}
+			}
+		],
+		// 规范 import 语句
+		"import/order": [
+			"error",
+			{
+				/*
+         * 1. node 内置模块
+         * 2. 外部导入模块
+         * 3. 内部导入模块 (if you have configured your path or webpack to handle your internal paths differently)
+         * 4. 父级目录中文件、同目录下文件、同目录的 index
+         * 5. "object"-imports (only available in TypeScript) 此处仅为了使得对样式文件的 order 生效
+         */
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					[
+						"parent",
+						"sibling",
+						"index"
+					],
+					"object"
+				],
+				// 字母表升序，默认不忽略大小写
+				"alphabetize": {
+					"order": "asc"
+				},
+				// 处理 less 文件 (https://github.com/import-js/eslint-plugin-import/issues/1239)
+				"pathGroups": [
+					{
+						"pattern": "{.,..}/**/*.less",
+						"group": "object",
+						"position": "after"
+					}
+				],
+				"warnOnUnassignedImports": true,
+				// 中间不允许空行
+				"newlines-between": "never"
+			}
+		]
+	}
+}

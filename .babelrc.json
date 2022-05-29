@@ -1,0 +1,14 @@
+{
+	"presets": [
+		"@babel/preset-env",
+		[
+			"@babel/preset-react",
+			{
+				// No more「import React from 'react'」
+				// https://dev.to/wojtekmaj/how-to-enable-automatic-runtime-in-react-17-with-babel-preset-react-52l
+				"runtime": "automatic"
+			}
+		],
+		"@babel/preset-typescript"
+	]
+}

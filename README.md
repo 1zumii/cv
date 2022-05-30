@@ -18,5 +18,5 @@ pnpm run deploy
 项目中需要在如下文件中配置路径映射
 
 - [tsconfig.paths.json](https://www.typescriptlang.org/tsconfig#paths): `compilerOptions.paths`, *build 前*
-- config-overrides.js: `addWebpackAlias`, *build 后*
+- webpack.config.js: `resolve.alias`, *build 后*
 - .eslintrc.js: `settings['import/internal-regex']`, *lint 时*

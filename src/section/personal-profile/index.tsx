@@ -4,7 +4,7 @@ import './style.less';
 
 const PersonalProfile: FC = () => (
   <div className="personal-profile">
-    <h2 className="name">{info.name}</h2>
+    <h2 className="name" style={{ fontSize: '1.4rem' }}>{info.name}</h2>
     <div className="contacts">
       <span>{info.phoneNumber}</span>
       <span style={{ color: 'var(--assist-color-txt-2)' }}>&nbsp;|&nbsp;</span>

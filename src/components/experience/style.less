@@ -1,12 +1,18 @@
 .experience {
   position: relative;
   line-height: 2rem;
+  margin-top: 1rem;
+
+  h4.section-title + & {
+    margin-top: 0;
+  }
 
   & > .experience-name {
     font-weight: 600;
   }
 
   & > .experience-duration {
+    color: var(--assist-color-txt-2);
     position: absolute;
     top: 0;
     right: 0;

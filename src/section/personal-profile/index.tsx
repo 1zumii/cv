@@ -10,7 +10,7 @@ const PersonalProfile: FC = () => (
       <span style={{ color: 'var(--assist-color-txt-2)' }}>&nbsp;|&nbsp;</span>
       <span>{info.email}</span>
     </div>
-    <div className="github"><a href={info.github?.[1] ?? ''}>{info.github?.[0]}</a></div>
+    <div className="github"><a target="_blank" href={info.github?.[1] ?? ''} rel="noreferrer">{info.github?.[0]}</a></div>
   </div>
 );
 

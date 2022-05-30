@@ -5,7 +5,7 @@ export const info: Info = {
   position: '前端开发',
   phoneNumber: '15623958611',
   email: 'linyu_qin@163.com',
-  github: ['github.com/izumiiAoba/notebooks_cloud', 'github.com/izumiiAoba/notebooks_cloud'],
+  github: ['github.com/izumiiAoba/notebooks_cloud', 'https://github.com/izumiiAoba/notebooks_cloud'],
 };
 
 export const education: Experience = {

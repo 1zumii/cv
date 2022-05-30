@@ -23,12 +23,12 @@ const Experience: FC<{info: Props}> = ({ info }) => {
   }, [content]);
 
   return (
-    <div className="experience" key={info.key}>
+    <section className="experience" key={info.key}>
       <div className="experience-name">{info.title}</div>
       <div className="experience-duration">{info.duration}</div>
       <div className="experience-description">{info.description}</div>
       {experienceContent}
-    </div>
+    </section>
   );
 };
 

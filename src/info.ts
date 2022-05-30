@@ -49,22 +49,6 @@ export const work: Experience = {
 
 export const projects: Experience[] = [
   {
-    key: 'ttes',
-    title: 'TTES 技术人才洞察系统',
-    duration: '2021年06月 - 2022年02月',
-    content: [
-      '项目描述：标准化采集研发人员日常活动数据，建立技术人才评价模型体系，辅助技术评价流程。',
-      '技术实现：React、Typescript、Less、NestJS',
-      [
-        '责任描述：',
-        '业务需求、功能模块的开发',
-        '提取公共 Hook，复用宽表的分页、搜索筛选功能',
-        '使用 Echarts 完成定制化图表需求开发',
-        '规范、完善 ESlint，并增加 StyleLint 规范样式代码',
-      ],
-    ],
-  },
-  {
     key: 'tmap',
     title: 'TMAP 业务数字化管理平台',
     duration: '2022年02月 - 2022年06月',
@@ -78,6 +62,22 @@ export const projects: Experience[] = [
         '负责富文本编辑器的技术选型，以及在项目的定制化实现',
         '参与项目中事件中心的设计与开发，实现跨组件的数据通信',
         '对协作开发同事的代码提交进行 Code Review',
+      ],
+    ],
+  },
+  {
+    key: 'ttes',
+    title: 'TTES 技术人才洞察系统',
+    duration: '2021年06月 - 2022年02月',
+    content: [
+      '项目描述：标准化采集研发人员日常活动数据，建立技术人才评价模型体系，辅助技术评价流程。',
+      '技术实现：React、Typescript、Less、NestJS',
+      [
+        '责任描述：',
+        '业务需求、功能模块的开发',
+        '提取公共 Hook，复用宽表的分页、搜索筛选功能',
+        '使用 Echarts 完成定制化图表需求开发',
+        '规范、完善 ESlint，并增加 StyleLint 规范样式代码',
       ],
     ],
   },

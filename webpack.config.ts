@@ -6,7 +6,7 @@ import { Configuration } from 'webpack';
 // in case you run into any typescript error when configuring `devServer`
 import 'webpack-dev-server';
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'dev';
 
 const config: Configuration = {
   entry: './src/index.tsx',
@@ -14,7 +14,7 @@ const config: Configuration = {
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/cv',
+    publicPath: isDev ? '/' : '/cv',
   },
   devtool: 'eval-source-map',
   plugins: [
@@ -31,6 +31,7 @@ const config: Configuration = {
     alias: {
       '@src': path.resolve(__dirname, 'src/'),
       '@style': path.resolve(__dirname, 'src/style/'),
+      '@section': path.resolve(__dirname, 'src/section/'),
     },
   },
   module: {
@@ -63,5 +64,8 @@ const config: Configuration = {
     },
   },
 };
+
+// eslint-disable-next-line no-console
+console.log('\n🙏 祝我2022夏天能找到个好工作 🙏\n');
 
 export default config;

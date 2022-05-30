@@ -6,7 +6,10 @@
 			],
 			"@style/*": [
 				"src/style/*"
-			]
+			],
+			"@section/*": [
+				"src/section/*"
+			],
 		}
 	}
 }

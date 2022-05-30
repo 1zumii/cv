@@ -1,0 +1,24 @@
+.experience {
+  position: relative;
+  line-height: 28px;
+
+  & > .experience-name {
+    font-weight: 600;
+  }
+
+  & > .experience-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul.experience-content-list,
+  ol.experience-content-list {
+    margin: 3px 0 6px;
+    padding-left: 16px;
+  }
+
+  .experience-content-list > li::marker {
+    color: var(--assist-color-txt-2);
+  }
+}

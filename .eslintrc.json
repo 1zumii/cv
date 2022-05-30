@@ -8,6 +8,7 @@
 		"airbnb",
 		"airbnb/hooks",
 		"plugin:@typescript-eslint/recommended"
+		// "prettier"
 	],
 	"parserOptions": {
 		"project": [
@@ -20,9 +21,11 @@
 			"version": "detect"
 		},
 		// 用于指明 import/order 中，哪些属于内部导入模块
-		"import/internal-regex": "^@(src)/"
+		"import/internal-regex": "^@(src|style|section)/"
 	},
 	"rules": {
+		// TODO: 看能不能用其他方式解决这个问题
+		"import/no-unresolved": "off",
 		// 不检查 "React" must be in scope when using JSX，同时在 tsconfig 中配置 compilerOptions.jsx: react-jsx
 		"react/react-in-jsx-scope": "off",
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
@@ -50,6 +53,7 @@
 				]
 			}
 		],
+		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-delimiter-style.md
 		"@typescript-eslint/member-delimiter-style": [
 			"error",
 			{
@@ -64,6 +68,7 @@
 				"multilineDetection": "brackets"
 			}
 		],
+		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/type-annotation-spacing.md
 		"@typescript-eslint/type-annotation-spacing": [
 			"error",
 			{
@@ -73,6 +78,14 @@
 						"after": true
 					}
 				}
+			}
+		],
+		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/space-infix-ops.md
+		"space-infix-ops": "off",
+		"@typescript-eslint/space-infix-ops": [
+			"error",
+			{
+				"int32Hint": false
 			}
 		],
 		// 规范 import 语句

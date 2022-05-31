@@ -23,6 +23,7 @@ export const skills: string[] = [
   '熟悉 React、Typescript、Less 等前端开发技术',
   '了解并日常使用 Ant Design、ECharts 等工具库',
   '了解并使用 Webpack 构建前端应用，并配合 ESLint、StyleLint 等工具规范代码风格',
+  '了解 NodeJS、Express、NestJS，并在项目中使用',
 ];
 
 export const internship: Experience = {
@@ -54,14 +55,14 @@ export const projects: Experience[] = [
     duration: '2022年02月 - 2022年06月',
     content: [
       '项目描述：基于研效数据指标体系，形成业务平台化能力。通过报告和指标形式，完成业务、产品、研发E2E的度量，实现业务端到端数字化管理。',
-      '技术实现：React、Typescript、Less、NestJS',
+      '技术实现：React、Typescript、Less、NestJS、MobX',
       [
         '责任描述：',
-        '业务需求、功能模块的开发',
-        '使用懒加载，开发、优化大数据量树形业务列表组件',
-        '负责富文本编辑器的技术选型，以及在项目的定制化实现',
-        '参与项目中事件中心的设计与开发，实现跨组件的数据通信',
-        '对协作开发同事的代码提交进行 Code Review',
+        '业务需求、功能模块的开发；',
+        '使用懒加载，开发、优化大数据量树形业务列表组件；',
+        '负责富文本编辑器的技术选型，以及在项目中定制化落地。并配置 COS 来实现文本编辑器内的图片粘贴上传、访问；',
+        '参与技术调研选型，采用 MobX 管理全局状态，让组件以细粒度跟踪数据变更，减少不必要的渲染；',
+        '参与项目中事件中心的设计与开发，实现跨组件的数据通信，完善整个系统的数据管理与通信；',
       ],
     ],
   },
@@ -70,14 +71,18 @@ export const projects: Experience[] = [
     title: 'TTES 技术人才洞察系统',
     duration: '2021年06月 - 2022年02月',
     content: [
-      '项目描述：标准化采集研发人员日常活动数据，建立技术人才评价模型体系，辅助技术评价流程。',
-      '技术实现：React、Typescript、Less、NestJS',
+      '项目描述：标准化采集技术人员研发活动数据，建立技术人才评价模型体系，辅助技术评价流程。',
+      '技术实现：React、Typescript、Less、NestJS、React-Query',
       [
         '责任描述：',
-        '业务需求、功能模块的开发',
-        '提取公共 Hook，复用宽表的分页、搜索筛选功能',
-        '使用 Echarts 完成定制化图表需求开发',
-        '规范、完善 ESlint，并增加 StyleLint 规范样式代码',
+        '和产品评审需求实现；',
+        '和交互设计沟通页面细节；',
+        '和后端开发同事讨论接口定义；',
+        '对协作开发同事的代码提交进行 Code Review；',
+        '提取公共 Hook，复用宽表的分页、搜索筛选功能；',
+        '调研引入 React-Query，实现透明化的请求结果缓存；',
+        '使用 Echarts 完成定制化图表需求开发，实现了如：饼图均匀分布、柱状图滚动条；',
+        '规范、完善 ESlint，并增加 StyleLint 规范样式代码；',
       ],
     ],
   },

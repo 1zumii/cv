@@ -3,6 +3,7 @@ import { Experience, Info } from '@src/types';
 export const info: Info = {
   name: '林雨钦',
   position: '前端开发',
+  age: '22岁',
   phoneNumber: '19128451011',
   email: 'linyu_qin@163.com',
   github: ['github 学习笔记', 'https://github.com/izumiiAoba/learning'],

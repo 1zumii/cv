@@ -6,9 +6,16 @@ const PersonalProfile: FC = () => (
   <div className="personal-profile">
     <h2 className="name" style={{ fontSize: '1.4rem', marginBottom: 12 }}>{info.name}</h2>
     <div className="else-info">
+      <span className="age">{info.age}</span>
+      <span style={{ color: 'var(--assist-color-txt-2)' }}>&nbsp;|&nbsp;</span>
       <span className="position">{info.position}</span>
       <span style={{ color: 'var(--assist-color-txt-2)' }}>&nbsp;|&nbsp;</span>
-      <span className="age">{info.age}</span>
+      {info.expectedWorkplace && (
+        <span className="workplace">
+          期望工作地：
+          {info.expectedWorkplace}
+        </span>
+      )}
     </div>
     {/* {info.github && Array.isArray(info.github) && (
       <div className="github">

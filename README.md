@@ -1,5 +1,7 @@
 ## 📦 Setup
-*推荐使用 pnpm*
+
+*推荐使用 [pnpm](https://pnpm.io/zh/installation)*
+
 ### 安装
 ```bash
 pnpm install
@@ -13,6 +15,21 @@ pnpm run start
 pnpm run build
 pnpm run deploy
 ```
+#### Github Pages
+
+项目使用 Github 提供的 `Pages` 服务托管打包后的静态页面资源文件，所以需要在仓库的 `Settings` -> `Pages` 里配置发布源。
+
+项目使用的 npm 包 [gh-pages](https://www.npmjs.com/package/gh-pages) 运行发布命令（即上述「部署」部分）以后，会发布到远端仓库的 `gh-pages` 分支中。
+
+所以，我们配置的发布源应该配置为：
+
+> Branch: gh-pages
+
+## 👨‍🔧 自动部署
+
+- 使用 [husky](https://typicode.github.io/husky) 来实现在主分支提交时，自动运行上述的「部署」部分
+- 脚本内容详见 [post-commit](./.husky/post-commit)
+
 ## 🗺️ 路径映射
 
 项目中需要在如下文件中配置路径映射
@@ -60,3 +77,4 @@ pnpm run deploy
 - [ ] 「专业技能」措辞可以改成：了解 => 熟练掌握
 - [x] 「工作经历」中的实习部分，把项目名称写全
 - [ ] 「项目经历」项目亮点可以措辞体现出：攻坚、优化
+
